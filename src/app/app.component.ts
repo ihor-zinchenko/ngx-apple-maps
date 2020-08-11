@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MapOptions, MapSettings} from 'ngx-apple-maps';
+import {MapConstructorOptions, MapKitInitOptions} from 'ngx-apple-maps/lib/declarations';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,15 @@ import {MapOptions, MapSettings} from 'ngx-apple-maps';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  options: MapOptions = {
+  // @ts-ignore
+  options: MapKitInitOptions = {
     // tslint:disable-next-line:max-line-length
-    JWT: '',
-    language: 'en'
+    JWT: 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjVGRkMyMzg3VFEifQ.eyJpc3MiOiJZNUJWRDVVSEFFIiwiaWF0IjoxNTc5MjY0OTA0LCJleHAiOjE2MTQwODQxMDR9.asjNUrfNlS1m_sWlN9U7YGaKRV8gkmbtIwN4lON659-s9PTiEpUF2mi93G2LEZAnWz5vfVeXdM0WiMmldGbJIw',
+    language: 'en',
+    callback: (data) => {
+      console.log('data ', data);
+      // console.log('data ', data);
+    }
   };
   customAnnotation = {
     latitude: 37.8083396,
@@ -49,7 +54,7 @@ export class AppComponent {
       }
     }
   ];
-  settings: MapSettings = {
+  settings: MapConstructorOptions = {
     isZoomEnabled: true,
     showsZoomControl: true,
     showsUserLocationControl: true,
