@@ -5,3 +5,7 @@
 .wrap {
   padding: 5px;
 }
+
+.maps-wrapper {
+  height: 500px;
+}

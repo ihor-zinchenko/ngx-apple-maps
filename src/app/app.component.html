@@ -1,17 +1,20 @@
-<ngx-apple-maps [options]="options" [settings]="settings">
-  <ng-template *ngFor="let item of annotations">
-    <ngx-apple-maps-annotation [options]="item.options" [latitude]="item.latitude" [longitude]="item.longitude">
-    </ngx-apple-maps-annotation>
-  </ng-template>
+<div class="maps-wrapper">
+  <ngx-apple-maps [options]="options" [settings]="settings">
+    <ng-template *ngFor="let item of annotations">
+      <ngx-apple-maps-annotation [options]="item.options" [latitude]="item.latitude" [longitude]="item.longitude">
+      </ngx-apple-maps-annotation>
+    </ng-template>
 
-  <ngx-apple-maps-annotation [options]="customAnnotation.options" [latitude]="customAnnotation.latitude" [longitude]="customAnnotation.longitude">
-    <div class="wrap">
-      <div>
-        Test
+    <ngx-apple-maps-annotation [options]="customAnnotation.options" [latitude]="customAnnotation.latitude" [longitude]="customAnnotation.longitude">
+      <div class="wrap">
+        <div>
+          Test
+        </div>
+        <div class="red-text">
+          you can add your custom styles to current div
+        </div>
       </div>
-      <div class="red-text">
-        you can add your custom styles to current div
-      </div>
-    </div>
-  </ngx-apple-maps-annotation>
-</ngx-apple-maps>
+    </ngx-apple-maps-annotation>
+  </ngx-apple-maps>
+
+</div>

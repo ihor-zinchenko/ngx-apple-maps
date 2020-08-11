@@ -10,7 +10,7 @@ export class AppComponent {
   // @ts-ignore
   options: MapKitInitOptions = {
     // tslint:disable-next-line:max-line-length
-    JWT: 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjVGRkMyMzg3VFEifQ.eyJpc3MiOiJZNUJWRDVVSEFFIiwiaWF0IjoxNTc5MjY0OTA0LCJleHAiOjE2MTQwODQxMDR9.asjNUrfNlS1m_sWlN9U7YGaKRV8gkmbtIwN4lON659-s9PTiEpUF2mi93G2LEZAnWz5vfVeXdM0WiMmldGbJIw',
+    JWT: '',
     language: 'en',
     callback: (data) => {
       console.log('data ', data);
