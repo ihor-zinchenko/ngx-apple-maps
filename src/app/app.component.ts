@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
-import {MapConstructorOptions, MapKitInitOptions} from 'ngx-apple-maps/lib/declarations';
+import {RouterOutlet} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {AppleMapsModule, MapSettings} from 'ngx-apple-maps';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, AppleMapsModule, CommonModule, FormsModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   // @ts-ignore
@@ -12,7 +17,7 @@ export class AppComponent {
     // tslint:disable-next-line:max-line-length
     JWT: '',
     language: 'en',
-    callback: (data) => {
+    callback: (data: any) => {
       console.log('data ', data);
       // console.log('data ', data);
     }
@@ -54,7 +59,7 @@ export class AppComponent {
       }
     }
   ];
-  settings: MapConstructorOptions = {
+  settings: MapSettings = {
     isZoomEnabled: true,
     showsZoomControl: true,
     showsUserLocationControl: true,

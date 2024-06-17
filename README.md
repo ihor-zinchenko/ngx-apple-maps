@@ -142,7 +142,7 @@ After successfully initializatin of the map you are got map object with next met
     options = {
         animate: true, // optional, default true
         padding: {top: 20} // left right bottom, optional
-        span: {from: 0, to: 1} // optional
+        span: {latitudeDelta: 0, longitudeDelta 1} // optional
     }
   */
   getAnnotations() // return Promise of annotations
@@ -161,8 +161,8 @@ settings:MapConstructorOptions = {
       longitude: -122.030067374026
     },
     span: { // https://developer.apple.com/documentation/mapkitjs/mapkit/coordinatespan/2973870-mapkit_coordinatespan
-      from: 0,
-      to: 1
+      latitudeDelta: 0,
+      longitudeDelta: 1
     }
   },
   center: { // center of the map
@@ -277,8 +277,8 @@ const options = {  // optional
       longitude: number,
     };
     span: {
-      from: number,
-      to: number,
+      latitudeDelta: number,
+      longitudeDelta number,
     };
   };
 };
