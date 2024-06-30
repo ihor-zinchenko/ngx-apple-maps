@@ -1,3 +1,7 @@
+#### 1.0.0-beta.0 Released. Source code will be public soon. Feel free to open issue or ask question.
+
+
+
 # Angular Apple Maps (mapkit.js)
 
 ## Before you start
