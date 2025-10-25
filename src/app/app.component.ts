@@ -5,11 +5,10 @@ import {FormsModule} from '@angular/forms';
 import {AppleMapsModule, MapSettings} from 'ngx-apple-maps';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, AppleMapsModule, CommonModule, FormsModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [RouterOutlet, AppleMapsModule, CommonModule, FormsModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   // @ts-ignore
